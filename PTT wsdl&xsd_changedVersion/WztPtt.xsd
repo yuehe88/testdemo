@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema  xmlns="http://schemas.ericsson.com/ma/CA/WztPtt/" targetNamespace="http://schemas.ericsson.com/ma/CA/WztPtt/" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified"
+		attributeFormDefault="unqualified"
+			xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+			   xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+			  	 jaxb:extensionBindingPrefixes="xjc"
+                   		jaxb:version="1.0">
+	<xs:annotation>
+	   <xs:appinfo>
+		  <jaxb:globalBindings enableJavaNamingConventions="false" underscoreBinding="asCharInWord">
+			  <xjc:serializable uid="12343" />
+		  </jaxb:globalBindings>
+	   </xs:appinfo>
+	</xs:annotation>
+    <xs:element name="msisdn" type="xs:string"/>
+	
+	<xs:element name="create" type="Subscription">
+	</xs:element>
+	<xs:element name="set" type="Subscription">
+	</xs:element>
+	<xs:element name="delete" type="Subscription">
+	</xs:element>
+	<xs:element name="getResponse" type="Subscription">
+	</xs:element>
+
+<xs:complexType name="Subscription">
+  <xs:sequence>
+    <xs:element name="msisdn" type="xs:string"/> 
+    <xs:element name="groupuri" type="xs:string" minOccurs="0"/> 
+    <xs:element name="firstname" type="xs:string" minOccurs="0"/> 
+    <xs:element name="lastname" type="xs:string" minOccurs="0"/> 
+    <xs:element name="groupsett" type="xs:int" minOccurs="0"/> 
+    <xs:element name="usersett" type="xs:int" minOccurs="0"/> 
+    <xs:element name="confPin" type="xs:string" minOccurs="0"/>
+  </xs:sequence>
+  <xs:attribute name="msisdn" type="xs:string" />
+</xs:complexType>
+</xs:schema>
